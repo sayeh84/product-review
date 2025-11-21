@@ -1,7 +1,8 @@
 'use client'
 
-import ProductReview from './ProductReview/productReview'
-import Sign from '@/app/Sign/sign'
+import ProductReview from './productReview/productReview'
+import Sign from '@/app/sign/sign'
+import ProductsList from '@/app/components/productsList'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { FcGoogle } from 'react-icons/fc'
 
@@ -35,7 +36,7 @@ export default function HomePage() {
             Logga ut
           </button>
         </div>
-
+        <ProductsList />
         <ProductReview />
       </div>
     )
