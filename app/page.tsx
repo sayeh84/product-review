@@ -1,6 +1,6 @@
 'use client'
 
-import ProductReview from './ProductReview /review'
+import ProductReview from './ProductReview/productReview'
 import Sign from '@/app/Sign/sign'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { FcGoogle } from 'react-icons/fc'
@@ -8,7 +8,6 @@ import { FcGoogle } from 'react-icons/fc'
 export default function HomePage() {
   const { data: session, status } = useSession()
 
-  // ✅ Hantera laddningsstatus för sessionen
   if (status === 'loading') {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
